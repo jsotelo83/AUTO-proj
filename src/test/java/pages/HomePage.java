@@ -9,8 +9,8 @@ import org.testng.Assert;
 
 public class HomePage extends BasePage {
 
-    public HomePage (WebDriver driver, WebDriverWait wait) {
-        super(driver, wait);
+    public HomePage (WebDriver driver) {
+        super(driver);
     }
 
     By searchInput = By.id("searchInput");

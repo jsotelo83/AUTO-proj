@@ -10,8 +10,8 @@ import org.testng.Assert;
 
 public class ArticlePage extends BasePage {
 
-    public ArticlePage (WebDriver driver, WebDriverWait wait) {
-        super(driver, wait);
+    public ArticlePage (WebDriver driver) {
+        super(driver);
     }
 
     By articleTitle = By.id("firstHeading");

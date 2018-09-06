@@ -1,15 +1,15 @@
 package tests;
-
 import org.testng.annotations.Test;
 import pages.ArticlePage;
 import pages.HomePage;
 
 public class ChallengeTest extends BaseTest {
 
+
     @Test (priority = 0, enabled = true)
     public void navigateToHomeTest () throws InterruptedException {
 
-        HomePage homePage = new HomePage(driver,wait);
+        HomePage homePage = new HomePage(driver);
 
         homePage.goToHome();
 
@@ -20,8 +20,8 @@ public class ChallengeTest extends BaseTest {
     @Test (priority = 1, enabled = true)
     public void validateSearch () throws InterruptedException {
 
-        HomePage homePage = new HomePage(driver,wait);
-        ArticlePage articlePage = new ArticlePage(driver, wait);
+        HomePage homePage = new HomePage(driver);
+        ArticlePage articlePage = new ArticlePage(driver);
 
         String searchString = "Taylor Swift";
 
@@ -34,8 +34,8 @@ public class ChallengeTest extends BaseTest {
     @Test (priority = 2, enabled = true)
     public void validatesStudioAlbums () throws InterruptedException {
 
-        HomePage homePage = new HomePage(driver,wait);
-        ArticlePage articlePage = new ArticlePage(driver, wait);
+        HomePage homePage = new HomePage(driver);
+        ArticlePage articlePage = new ArticlePage(driver);
 
         String[] albums;
         albums = new String[6];
@@ -58,8 +58,8 @@ public class ChallengeTest extends BaseTest {
 
     @Test (priority = 3, enabled = true)
     public void validatesStudioAlbumHoverMessage () throws InterruptedException {
-        HomePage homePage = new HomePage(driver,wait);
-        ArticlePage articlePage = new ArticlePage(driver, wait);
+        HomePage homePage = new HomePage(driver);
+        ArticlePage articlePage = new ArticlePage(driver);
 
         String searchString = "Taylor Swift";
 
