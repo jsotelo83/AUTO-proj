@@ -13,18 +13,18 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
-    By searchInput = By.id("searchInput");
-    By searchButton = By.xpath("//*[@id=\"search-form\"]/fieldset/button");
+    public static By searchInput = By.id("searchInput");
+    public static By searchButton = By.xpath("//*[@id=\"search-form\"]/fieldset/button");
 
-    public String getBaseURL(){
+    public static String getBaseURL(){
         return baseURL;
     }
 
-    public void goToHome (){
-        goTo(baseURL);
+    public static void goToHome (){
+        BasePage.goTo(baseURL);
     }
 
-    public void search(String searchString){
+    public static void search(String searchString){
         WebDriverWait wait = new WebDriverWait(driver, 10);
         WebElement element = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(searchInput));
@@ -32,7 +32,7 @@ public class HomePage extends BasePage {
         click(searchButton);
     }
 
-    public void validateCurrentURL (String URL){
+    public static void validateCurrentURL (String URL){
         Assert.assertEquals(driver.getCurrentUrl(), URL);
     }
 
